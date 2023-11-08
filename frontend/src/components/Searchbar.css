@@ -1,0 +1,33 @@
+.Searchbar {
+    justify-content: left;
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.Searchbar input[type="text"]{
+  height: 40px;
+  width: 90%;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding-left: 20px;
+  text-align: center;
+  font-size: 25px;
+  background: url('../../assets/R.png') no-repeat scroll ;
+  background-size: 30px 30px;
+  background-position: 5px 5px;
+  transition: border-radius 0.3s;
+}
+
+.Searchbar input[type="text"]:hover{
+    border: 3px solid rgb(131, 131, 131);
+    border-radius: 10px;
+}
+
+.Searchbar input[type="text"]:focus{
+    border-radius: 10px;
+    text-indent: 0;
+}
+
+.Searchbar input[type="text"]:focus::placeholder{
+    color: transparent;
+}
