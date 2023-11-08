@@ -20,7 +20,6 @@
     width: 100%;
     height: auto;
     display: block;
-    transform: scale(1);
 }
 
 .Squares:hover{
@@ -88,6 +87,7 @@
 .modalFoodImage{
     width: 100%;
     height: auto;
+    overflow: hidden;
     display: block;
     transform: scale(1);
 }

@@ -5,11 +5,13 @@ const Square = ({ data, squareKey }) => {
     const firstThree = data.ingredients.slice(0,3);
     return (
       <div className='Squares'>
+        <div style={{ maxHeight: "200px", overflow: "hidden" }}>
         <img
             src={data.pic}
             alt="food"
             className='foodImage'
         />
+        </div>
         <h3>{data.name}</h3>
         <p>{data.description}</p>
         <p>
@@ -58,11 +60,13 @@ const DataDisplay = ({ entries }) => {
                     <div className="overlay" onClick={closeSquareModal}></div>
                     <div className="modal">
                         <div className="modal-content">
+                            <div style={{ maxHeight: "560px", overflow: "hidden" }}>
                             <img
                                 src={selectedSquare.pic}
                                 alt="food"
                                 className='modalFoodImage'
                             />
+                            </div>
                             <h1>{selectedSquare.name}</h1>
                             <h2>
                                 Description
