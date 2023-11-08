@@ -70,8 +70,35 @@ const DataDisplay = () => {
                     <div className="overlay" onClick={closeSquareModal}></div>
                     <div className="modal">
                         <div className="modal-content">
+                            <img
+                                src={selectedSquare.pic}
+                                alt="Picture"
+                                className='modalFoodImage'
+                            />
+                            <h1>{selectedSquare.name}</h1>
+                            <h2>
+                                Description
+                            </h2>
+                            <p>
+                                {selectedSquare.description}
+                            </p>
+                            <h2>Ingredients:</h2>
+                            <p>
+                                <ul style={{marginTop: "-2px"}}>
+                                    {selectedSquare.ingredients.map((ingredient, index) => (
+                                        <li key={index}>{ingredient}</li>
+                                    ))}
+                                </ul>
+                            </p>
+                            <h2>Steps:</h2>
+                            <p>
+                                <ol style={{marginTop: "-2px"}}>
+                                    {selectedSquare.steps.map((ingredient, index) => (
+                                        <li key={index}>{ingredient}</li>
+                                    ))}
+                                </ol>
+                            </p>
                             
-                            <h2>{selectedSquare.name}</h2>
                             {/* Display other information */}
                         </div>
                     </div>

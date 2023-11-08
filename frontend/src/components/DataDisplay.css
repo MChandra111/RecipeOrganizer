@@ -58,17 +58,19 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    max-width: 600px; /* Adjust the max width to suit your design */
+    max-width: 700px; /* Adjust the max width to suit your design */
     background: #fff; /* Background color for the modal */
     border-radius: 10px;
     z-index: 1001; /* Above the overlay */
     padding: 20px;
+    max-height: 80%;
+    overflow-y: auto;
 }
 
 .modal-content {
     /* Additional styles for the modal content */
     background: #fff; /* Change the background of the content */
-    padding: 20px;
+    padding: 8px;
     border-radius: 5px;
 }
 
@@ -81,4 +83,23 @@
     right: 10px;
     font-size: 16px;
     color: #333;
+}
+
+.modalFoodImage{
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: scale(1);
+}
+
+.modal p{
+    font-size: 20px;
+}
+
+.modal::-webkit-scrollbar{
+    width: 0;
+}
+  
+.modal::-webkit-scrollbar-track{
+    background: transparent;
 }
