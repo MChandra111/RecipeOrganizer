@@ -15,3 +15,28 @@ body::-webkit-scrollbar-track{
   flex-wrap: wrap;
 }
 
+.footer{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.AddEntry{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  width: 200px;
+  height: 55px;
+  border-radius: 15px;
+  font-size: 20px;
+  vertical-align: center;
+}
+
+.AddEntry:hover{
+  background-color: rgb(215, 215, 215);
+}
+
+.button:active {
+  background-color: rgb(123, 123, 123);
+}
+

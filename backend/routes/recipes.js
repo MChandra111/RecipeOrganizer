@@ -12,12 +12,14 @@ router.route('/add').post((req, res) => {
     const description = req.body.description;
     const ingredients = req.body.ingredients;
     const steps = req.body.steps;
+    const pic = req.body.pic;
 
     const newRecipe = new Recipe({
         name,
         description,
         ingredients,
         steps,
+        pic,
     });
     
     newRecipe.save()
@@ -34,12 +36,6 @@ router.route('/').get( async (req, res) => {
           { ingredients: { $in: [searchTerm] }}
         ],
       });
-    res.json(results);
-});
-
-router.route('/sort').get( async (req, res) => {
-    const sortBy = req.query.sortBy;
-    const results = await YourModel.find().sort(sortBy);
     res.json(results);
 });
 

@@ -11,7 +11,7 @@ function Logobar() {
                     alt="CINNAMOROLL"
                     className='Cinna'
                 />
-                Happy <span style={{color: "maroon"}}>Wife</span>, Happy <span style={{color: "maroon"}}>Life</span>
+                Happy <span style={{color: "crimson"}}>Wife</span>, Happy <span style={{color: "crimson"}}>Life</span>
             </h1>
             <div className='Logobar'>            
             </div>

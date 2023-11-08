@@ -4,6 +4,7 @@ import Logobar from "./components/Logobar";
 import Searchbar from './components/Searchbar';
 import DataDisplay from './components/DataDisplay';
 import axios from 'axios';
+import AddEntry from './components/AddEntry';
 
 function App() {
   const [entries, setEntries] = useState([]);
@@ -41,6 +42,9 @@ function App() {
         <Searchbar onSearch={handleSearch} />
       <div className='allSquares'>
         <DataDisplay entries={filteredEntries} />
+      </div>
+      <div className='footer'>
+        <AddEntry />
       </div>
     </div>
   );

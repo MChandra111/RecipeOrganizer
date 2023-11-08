@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./DataDisplay.css";
 
-const Square = ({ data }) => {
+const Square = ({ data, squareKey }) => {
     const firstThree = data.ingredients.slice(0,3);
     return (
       <div className='Squares'>
@@ -14,13 +14,13 @@ const Square = ({ data }) => {
         <p>{data.description}</p>
         <p>
             Ingredients:
+        </p>
             <ul style={{marginTop: "-2px"}}>
                 {firstThree.map((ingredient, index) => (
                     <li key={index}>{ingredient}</li>
                 ))}
                 {data.ingredients.length > 3 && <p>...and more</p>}
             </ul>
-        </p>
         {/* Render other properties as needed */}
       </div>
     );
@@ -71,22 +71,17 @@ const DataDisplay = ({ entries }) => {
                                 {selectedSquare.description}
                             </p>
                             <h2>Ingredients:</h2>
-                            <p>
                                 <ul style={{marginTop: "-2px"}}>
                                     {selectedSquare.ingredients.map((ingredient, index) => (
                                         <li key={index}>{ingredient}</li>
                                     ))}
                                 </ul>
-                            </p>
                             <h2>Steps:</h2>
-                            <p>
                                 <ol style={{marginTop: "-2px"}}>
                                     {selectedSquare.steps.map((ingredient, index) => (
                                         <li key={index}>{ingredient}</li>
                                     ))}
                                 </ol>
-                            </p>
-                            
                             {/* Display other information */}
                         </div>
                     </div>
@@ -96,7 +91,7 @@ const DataDisplay = ({ entries }) => {
         {entries.map((entry) => (
             <div className='SquarePlacement' key={entry.id}>
                 <div onClick={() => handleSquareClick(entry)}>
-                    <Square key={entry._id} data={entry} />
+                    <Square key={entry._id} data={entry} squareKey={entry._id} />
                 </div>
             </div>
         ))}
