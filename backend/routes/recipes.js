@@ -25,4 +25,22 @@ router.route('/add').post((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/').get( async (req, res) => {
+    const searchTerm = req.query.term;
+    const results = await Recipe.find({
+        $or: [
+          { name: { $regex: searchTerm, $options: 'i' } },
+          { description: { $regex: searchTerm, $options: 'i' } },
+          { ingredients: { $in: [searchTerm] }}
+        ],
+      });
+    res.json(results);
+});
+
+router.route('/sort').get( async (req, res) => {
+    const sortBy = req.query.sortBy;
+    const results = await YourModel.find().sort(sortBy);
+    res.json(results);
+});
+
 module.exports = router;

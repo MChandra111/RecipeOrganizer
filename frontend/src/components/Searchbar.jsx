@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Searchbar.css';
 
 const Searchbar = ({ onSearch }) => {
@@ -6,7 +6,7 @@ const Searchbar = ({ onSearch }) => {
     
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
-            return("Hello");
+            onSearch(e.target.value);
           }
     };
 

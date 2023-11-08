@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import "./DataDisplay.css";
 
 const Square = ({ data }) => {
@@ -8,7 +7,7 @@ const Square = ({ data }) => {
       <div className='Squares'>
         <img
             src={data.pic}
-            alt="Picture"
+            alt="food"
             className='foodImage'
         />
         <h3>{data.name}</h3>
@@ -27,19 +26,8 @@ const Square = ({ data }) => {
     );
 };
   
-const DataDisplay = () => {
-    const [entries, setEntries] = useState([]);
+const DataDisplay = ({ entries }) => {
     const [selectedSquare, setSelectedSquare] = useState(null);
-
-    useEffect(() => {
-        axios.get('http://localhost:3500/recipes')
-        .then((response) => {
-            setEntries(response.data);
-        })
-        .catch((error) => {
-            console.error('Error fetching data', error);
-        });
-    }, []);
 
     const handleSquareClick = (data) => {
         setSelectedSquare(data);
@@ -72,7 +60,7 @@ const DataDisplay = () => {
                         <div className="modal-content">
                             <img
                                 src={selectedSquare.pic}
-                                alt="Picture"
+                                alt="food"
                                 className='modalFoodImage'
                             />
                             <h1>{selectedSquare.name}</h1>

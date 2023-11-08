@@ -2,11 +2,11 @@
 
 (WIP)
 Full-stack MERN Project that allows me to:
-- Store recipes that I enjoy
-- Pick a random recipe that I have stored
-- Add new recipes from the website itself
-- Sort recipes based on ingredients I have available
-
+- Store recipes that I enjoy (Done)
+- Search recipes based on keywords from a searchbar (WIP)
+- Pick a random recipe that I have stored (WIP)
+- Add new recipes from the website itself (WIP)
+- Sort recipes based on ingredients I have available (WIP)
 
 ## Languages and Tools:
 <code><img height="30" alt="javascript" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
